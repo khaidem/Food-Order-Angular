@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { SearchComponent } from './search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
+
   
   ],
   providers: [],
