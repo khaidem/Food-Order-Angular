@@ -8,6 +8,9 @@ import { Tag } from 'src/app/shared/models/tag';
 export class FoodService {
 
   constructor() { }
+  getFoodById(id:number): Food{
+    return this.getAll().find(food => food.id ==id)!
+  }
   getAllFoodByTag(tag:string):Food[]{
     return tag == 'All' ?
     this.getAll() : this.getAll().filter(food => food.tags?.includes(tag))
@@ -17,7 +20,12 @@ export class FoodService {
   return [
     {name: 'All', count: 14},
     {name: 'FastFood', count: 4},
-    {name: 'Pizza',count: 5}
+    {name: 'Pizza',count: 2},
+    {name: 'Lunch', count: 3},
+    {name: 'SlowFood', count : 2},
+    {name:'Hamburger', count:1},
+    {name: 'Fry', count:1},
+    {name: 'soup', count:1}
   ]
   }
   getAll():Food[]{
@@ -25,7 +33,7 @@ export class FoodService {
      
     {
       id:1,
-      name:'Piza',
+      name:'Piza Pepperoni',
       cookTime:'10-20',
       price: 10,
       favorite:false,
@@ -37,112 +45,89 @@ export class FoodService {
     },
     {
       id:2,
-      name:'Ceramic Plate',
+      name:'Meatball',
       cookTime:'10-20',
       price: 200,
       favorite:false,
-      origin: ['Africa'],
+      origin: ['persie','middle east'],
       star: 3.5,
       imageUrl: '/assets/food2.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['SlowFood', 'Lunch']
 
     },
     {
       id:3,
-      name:'Socha',
+      name:'Hamburger',
       cookTime:'10-20',
       price: 10,
       favorite:false,
       origin: ['Europe'],
       star: 2.5,
       imageUrl: '/assets/food3.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['FastFoods','Hamburger']
 
     },
     {
       id:4,
-      name:'Funfaai',
+      name:'Fried Potatoes',
       cookTime:'10-20',
       price: 10,
       favorite:false,
-      origin: ['China'],
+      origin: ['Belgium ', 'France'],
       star: 5,
       imageUrl: '/assets/food2.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['FastFood','Fry',]
 
     },
     {
       id:5,
-      name:'Piza',
+      name:'Chiecken Soup',
       cookTime:'10-20',
       price: 10,
       favorite:false,
-      origin: ['Italy'],
+      origin: ['India', 'asia'],
       star: 4.5,
       imageUrl: '/assets/food5.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['SlowFood', 'soup']
 
     },
     {
       id:6,
-      name:'Piza',
+      name:'Vegetable Pizza',
       cookTime:'10-20',
       price: 10,
       favorite:false,
       origin: ['Italy'],
       star: 2.0,
       imageUrl: '/assets/food6.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['FastFood','Pizza','Launch']
 
     },
     {
       id:7,
-      name:'Tranmautritam',
+      name:'Vegetable spicy Pizza',
       cookTime:'10-20',
-      price: 500,
+      price: 10,
       favorite:false,
       origin: ['India'],
       star: 2,
       imageUrl: '/assets/food8.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['FastFood','Pizza','Launch']
 
     },
     {
       id:8,
-      name:'Sebastian Coman ',
+      name:'Vegetable burger',
       cookTime:'10-20',
       price: 50,
       favorite:false,
-      origin: ['USA'],
+      origin: ['India'],
       star: 3,
       imageUrl: '/assets/food9.jpg',
-      tags: ['FastFoods','Pizza','Launch']
+      tags: ['FastFood','Pizza','Launch']
 
     },
-    {
-      id:9,
-      name:'Mona Sabha  ',
-      cookTime:'10-20',
-      price: 1000,
-      favorite:false,
-      origin: ['UK'],
-      star: 4,
-      imageUrl: '/assets/food11.jpg',
-      tags: ['FastFoods','Pizza','Launch']
-
-    },
-    {
-      id:10,
-      name:'Pastries on Plate  ',
-      cookTime:'10-20',
-      price: 300,
-      favorite:false,
-      origin: ['Japan'],
-      star: 3.5,
-      imageUrl: '/assets/food12.jpg',
-      tags: ['FastFoods','Pizza','Launch']
-
-    },
+    
    
 
 

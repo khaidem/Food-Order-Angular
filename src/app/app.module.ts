@@ -9,6 +9,8 @@ import { StarRatingComponent } from './components/partials/star-rating/star-rati
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagComponent } from './tag/tag.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { FoodPageComponent } from './food-page/food-page.component';
 
 
 
@@ -19,7 +21,9 @@ import { TagComponent } from './tag/tag.component';
     HomeComponent,
     StarRatingComponent,
     SearchComponent,
-    TagComponent
+    TagComponent,
+    CartPageComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,
