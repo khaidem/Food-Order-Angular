@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { TagComponent } from './tag/tag.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     StarRatingComponent,
-    SearchComponent
+    SearchComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
