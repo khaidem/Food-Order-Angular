@@ -10,6 +10,9 @@ import { FoodService } from '../services/food/food.service';
 export class TagComponent implements OnInit{
   @Input()
   foodPageTags?:string[];
+
+  @Input()
+  justifyContent:string ='center';
  
   tags?:Tag[]=[];
   constructor(private fs:FoodService){}
